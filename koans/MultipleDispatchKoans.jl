@@ -1,23 +1,23 @@
 module MultipleDispatchKoans
 
 struct Dog
-    name::String
+  name::String
 end
 
 struct Cat
-    name::String
+  name::String
 end
 
-function hello()
-end
+hello() =
+  "hello stranger"
 
-function hello(name)
-end
+hello(name) =
+  "hello $(name)"
 
-function pet_talk(pet::Dog)
-end
+pet_talk(pet::Dog) =
+  "$(pet.name): bark"
 
-function pet_talk(pet::Cat)
-end
+pet_talk(pet::Cat) =
+  "$(pet.name): meow"
 
 end

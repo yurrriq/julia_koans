@@ -1,21 +1,21 @@
 module BitwiseKoans
 
-function not(x)
-end
+not(x) =
+  ~x
 
-function and(x, y)
-end
+and(x, y) =
+  x & y
 
-function or(x, y)
-end
+or(x, y) =
+  x | y
 
-function xor_koan(x, y)
-end
+xor_koan(x, y) =
+  x ⊻ y
 
-function right_shift(x, y)
-end
+right_shift(x, y) =
+  x >> y
 
-function left_shift(x, y) 
-end
+left_shift(x, y) =
+  x << y
 
 end

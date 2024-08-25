@@ -12,19 +12,19 @@ function not_equals(x, y)
     x != y
 end
 
-function less_than(x, y) 
+function less_than(x, y)
     x < y
 end
 
-function greater_than(x, y) 
+function greater_than(x, y)
     x > y
 end
 
-function less_than_or_equal_to(x, y) 
+function less_than_or_equal_to(x, y)
     x <=y
 end
 
-function greater_than_or_equal_to(x, y) 
+function greater_than_or_equal_to(x, y)
     x >= y
 end
 

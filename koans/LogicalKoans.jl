@@ -1,24 +1,24 @@
 module LogicalKoans
 
-function not(x)
-end
+not(x) =
+  !x
 
-function equals(x, y)
-end
+equals(x, y) =
+  x ≡ y
 
-function not_equals(x, y)
-end
+not_equals(x, y) =
+  x ≠ y
 
-function less_than(x, y) 
-end
+less_than(x, y) =
+  x < y
 
-function greater_than(x, y) 
-end
+greater_than(x, y) =
+  x > y
 
-function less_than_or_equal_to(x, y) 
-end
+less_than_or_equal_to(x, y) =
+  x ≤ y
 
-function greater_than_or_equal_to(x, y) 
-end
+greater_than_or_equal_to(x, y) =
+  x ≥ y
 
 end

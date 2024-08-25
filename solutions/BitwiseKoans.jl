@@ -20,7 +20,7 @@ function right_shift(x, y)
     x >> y
 end
 
-function left_shift(x, y) 
+function left_shift(x, y)
     x << y
 end
 
