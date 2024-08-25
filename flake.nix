@@ -65,6 +65,7 @@
                 python-env
               ];
             } [
+            "Documenter"
             "PythonCall"
             "Test"
           ];

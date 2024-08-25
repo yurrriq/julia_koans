@@ -1,37 +1,43 @@
 module PythonInterop
 
-#=
-Links:
-    - https://github.com/JuliaPy/PyCall.jl
-    - https://en.wikipedia.org/wiki/Fibonacci_number
-
-Notes:
-    - When py"..." is used it evaluates the code in a Python namespace dedicated
-    to your module (e.g. PythonInterop). Thus, you don't have to worry about
-    name clash, but Python functions declared cannot be accessed outside your module.
-    - Python functions must be defined in __init__ of your Julia module
-=#
-
-using Pkg
-Pkg.add("PyCall")
 using PyCall
 
+export py_sinpi
+
 function __init__()
+  py"""
+  import numpy as np
+
+
+  def sinpi(x):
+    return np.sin(np.pi * x)
+
+
+  def pyfib(n, fib):
+    if n < 2:
+      return n
+    else:
+      return fib(n - 1, pyfib) + fib(n - 2, pyfib)
+  """
 end
 
-# This function will return the sin of x pi
-function py_sinpi(x)
-end
+@doc raw"""
+    py_sinpi(x)
 
-function get_pyfib()
-end
+``\sin(\pi x)`` via [numpy](https://numpy.org).
+"""
+py_sinpi(x) =
+  py"sinpi"(x)
+
+get_pyfib() =
+  py"pyfib"
 
 #=
 This fibonacci function is a bit different of what is usually done,
 it expects to receive the function it will call to do its recursion.
 The general idea is to do something like this: jlfib -> pyfib -> jlfib -> ...
 =#
-function jlfib(n, fib)
-end
+jlfib(n, fib) =
+  n < 2 ? n : fib(n - 1, fib) + fib(n - 2, fib)
 
 end
