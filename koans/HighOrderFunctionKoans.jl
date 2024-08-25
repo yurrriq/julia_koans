@@ -1,15 +1,15 @@
 module HighOrderFunctionKoans
 
-function round_list(list)
-end
+round_list(list) =
+  map(round, list)
 
-function apply_fn(f, x)
-end
+apply_fn(f, x) =
+  f(x, 5)
 
-function add_n(list, n)
-end
+add_n(list, n) =
+  map(x -> x + n, list)
 
-function remove_multiples(list, n)
-end
+remove_multiples(list, n) =
+  filter(x -> x % n ≠ 0, list)
 
 end
