@@ -1,24 +1,24 @@
 module ArithmeticKoans
 
-function sum(x, y)
-end
+sum(x, y) =
+  x + y
 
-function difference(x, y)
-end
+difference(x, y) =
+  x - y
 
-function multiplication(x, y)
-end
+multiplication(x, y) =
+  x * y
 
-function division(x, y)
-end
+division(x, y) =
+  x / y
 
-function integer_division(x, y)
-end
+integer_division(x, y) =
+  x ÷ y
 
-function power(x, y)
-end
+power(x, y) =
+  x^y
 
-function modulo(x, y)
-end
+modulo(x, y) =
+  x % y
 
 end
